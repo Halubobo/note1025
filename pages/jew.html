@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>珠宝首饰</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style> 
+        .main{
+            position: relative;
+            width: 1200px;  
+            height: 1259px;
+            margin:0 auto;
+            /* background-color: red; */
+            margin-top:100px;
+        }
+        .main .photo1{
+            width: 710px;
+            height: 473px;
+            background: url(img/jew1.png) no-repeat center;
+        }
+        .main .photo2{
+            margin-top:50px;
+            width: 710px;
+            height: 473px;
+            background: url(img/jew2.png) no-repeat center;
+        }
+        .main .intro{
+            margin-top:60px;
+            display:block;
+            width: 710px;
+            height: 100px;
+            line-height: 25px;
+            font-size: 14px;
+            color:#6a6a6a;
+        }
+        .main .size{
+            display:block;
+            width: 710px;
+            height: 100px;
+            line-height: 25px;
+            font-size: 14px;
+            color:#6a6a6a;
+        }
+        .main .tag{
+            position: absolute;
+            left: 784px;
+            top: 0;
+            /* background-color: #555555; */
+            width: 416px;
+            height: 367px;
+        }
+        .main .tag h2{
+            /* float: left; */
+            display: block;
+            width: 100%;
+            height: 70px;
+            font-size:30px;
+            color:#2a2a2a;
+            line-height: 70px;
+            text-indent:30px;
+            border-left:2px solid #454545;
+        }
+        .main .tag .herstyle{
+            position: absolute;
+            left: 0;
+            top:54px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4c4c4c;
+            width: 244px;
+            text-align: right;
+        }
+        .main .tag .price{
+            width: 244px;
+            text-align: right;
+            font-size: 16px;
+            color: #cacaca;
+            line-height: 24px;
+            margin-top: 27px;
+            
+        }
+        .main .tag p{
+            margin-top:30px;
+            font-size:14px;
+            color:#cacaca;
+            line-height: 24px;
+            margin-left: 19px;
+        }
+        .main .tag .book{
+            
+            margin-top:50px;
+            width: 100%;
+            height: 43px;
+            text-align: center;
+        }
+        .main .tag .book a{
+            display: inline-block;
+            width: 149px;
+            height: 45px;
+            line-height: 45px;
+            border:1px solid #f5f5f5;
+            font-size:12px;
+            color:#2d2d2d;
+            text-align: center; 
+        }
+        .bottom{
+            width: 100%;
+            height: 472px;
+            background-color: #dddddd;
+        }
+        .bottom .bottom-c{
+            width: 1200px;
+            height: 100%;
+            margin:0 auto;
+            /* background-color: skyblue; */
+        }
+        .bottom .bottom-c .jewel{
+            width: 100%;
+            height: 70px;
+            padding-top:100px;
+            /* background-color: slateblue; */
+        }
+        .bottom-c .jewel .ring{
+            float: left;
+            margin-right:40px;
+            width: 75px;
+            height: 30px;
+            background-color: #f7f5f5;
+        }
+        .bottom-c .jewel  .ring  a{
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color:#929292;
+            font-size:12px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .bottom-c .jewel .necklace{
+            float: left;
+            margin-right:40px;
+            width: 75px;
+            height: 30px;
+            background-color: #f7f5f5;
+        }
+        .bottom-c .jewel  .necklace  a{
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color:#929292;
+            font-size:12px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .bottom-c .jewel .other{
+            float: left;
+            margin-right:40px;
+            width: 75px;
+            height: 30px;
+            background-color: #f7f5f5;
+        }
+        .bottom-c .jewel  .other  a{
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color:#929292;
+            font-size:12px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .bottom-c .lunbo{
+            position: relative;
+            width: 100%;
+            height: 137px;
+            /* background-color: slateblue; */
+        }
+        .bottom-c .lunbo .lunbo-item{
+            float: left;
+            margin-right:35px;
+            width: 212px;
+            height: 137px;
+            /* background-color: #fff; */
+            background: url(img/jewlunbo1.png) no-repeat center;
+        }
+        .bottom-c .lunbo .lunbo-item.mr0{
+            margin-right: 0;
+        }
+        .bottom-c .lunbo .lunbo-item.mr1{
+            position: relative;
+        }
+        .lunbo .lunbo-item.mr1 .describe{
+            position: absolute;
+            /* font-size:12px;
+            color:#fffefe; */
+            height: 60px;
+            width: 100%;
+            left:0;
+            bottom:0;
+            background-color:rgba(0, 0, 0, 0.4);
+            /* text-align: center;
+            */
+        }
+        .lunbo .lunbo-item.mr1 .describe p{
+            display: inline-block;
+            font-size:12px;
+            /* margin-top:12px; */
+            font-weight: bold;
+            color:#fffefe;
+            line-height: 24px;
+            text-indent: 15px;
+           
+        }
+        .bottom-c .lunbo .prev{
+            position: absolute;
+            background: url(img/arrowleft.png) no-repeat center;
+            height: 80px;
+            width: 49px;
+            top: 50%;
+            margin-top: -40px;
+            left: -65px;
+        }
+        .bottom-c .lunbo .next{
+            position: absolute;
+            background: url(img/arrowright.png) no-repeat center;
+            height: 80px;
+            width: 49px;
+            top: 50%;
+            margin-top: -40px;
+            right: -65px;
+        }
+        .bottom-c .more{
+            margin-top:60px;
+            width: 100%;
+            height: 45px;
+            text-align: center;
+
+        }
+        .bottom-c .more a{
+            display: inline-block;
+            width: 149px;
+            height: 45px;
+            line-height: 45px;
+            border:1px solid #bbbaba;
+            font-size:12px;
+            color:#bbbaba;
+            text-align: center; 
+        }
+        .footer{
+            background-color: #4d4d4d;
+            color: seashell;
+
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-c">
+        <div class="logo"></div>
+        <ul class="nav">
+            <li class="nav-item active">
+                <a href="../首页.html">首页</a>
+                <span class="line"></span>
+            </li>
+            <li class="nav-item">
+                <a href="wedding.html">婚纱礼服</a>
+                <span class="line"></span>
+            </li>
+            <li class="nav-item">
+                <a href="jew.html">珠宝首饰</a>
+                <span class="line"></span>
+            </li>
+            <li class="nav-item">
+                <a href="latest.html">最新活动</a>
+                <span class="line"></span>
+            </li>
+            <li class="nav-item mr0">
+                <a href="about.html">关于我们</a>
+                <span class="line"></span>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="photo1"></div>
+        <div class="photo2"></div>
+        <p class="intro">
+            Veronica HardWear系列优雅与颠覆精神并存，敏感捕捉到漫步纽约的时尚女性的精髓与能量。璀璨的钻石，更加凸显这枚戒指的女性魅力。
+        </p>
+        <p class="size">
+            钻戒：  $1999.00<br>
+            耳饰：  $3899.00
+        </p>
+    <div class="tag">
+        <h2>HardWear系列</h2>
+        <div class="herstyle">
+            对戒,耳饰
+        </div>
+        <div class="price">
+                $23199.00
+        </div>
+        <p>
+            18K白金镶圆形明亮式切割钻石；钻石总重5.99克拉；直径12毫米；舒适设计，易于佩戴。
+        </p>
+        <div class="book">
+            <a href="#">立即预约</a>
+        </div>
+    </div>
+
+    </div>
+    <div class="bottom">
+        <div class="bottom-c">
+            <div class="jewel">
+                <div class="ring">
+                    <a href="#">戒指</a>
+                </div>
+                <div class="necklace">
+                    <a href="#">项链</a>
+                </div>
+                <div class="other">
+                    <a href="#">其他</a>
+                </div>
+            </div>
+            <ul class="lunbo">
+                <li class="lunbo-item mr1">
+                    <div class="describe">
+                            <p>VERONICA  Victoria™系列</p>
+                            <p>Alternating戒指</p>
+                    </div>
+                </li>
+                <li class="lunbo-item"></li>
+                <li class="lunbo-item"></li>
+                <li class="lunbo-item"></li>
+                
+                <li class="lunbo-item mr0"></li>
+                <div class="prev"></div>
+                <div class="next"></div>
+            </ul>
+            <div class="more">
+                <a href="#" >MORE</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">    
+            <div class="footer-c">
+                <div class="left" >
+                    <p>网站备案号：豫ICP备110121210号</p>
+                    <p>增值电信业务经营许可证号：豫B2-20100033</p>
+                </div>
+                <ul class="right" >
+                    <li class="VERONICA">
+                        <div class="icon">
+                            2018 VERONICA
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">联系我们</a>
+                    </li>
+                    <li class="join">
+                        <a href="#">加入我们</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</body>
+</html>

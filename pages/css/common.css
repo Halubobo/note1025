@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header-c{
+    width: 1200px;
+    height: 80px;
+    margin:0 auto;
+    /* background-color: aqua; */
+}
+.header-c .logo{
+    float: left;
+    height: 100%;
+    width: 307px;
+    background: url(../img/logo.png) center no-repeat;
+}
+.header-c .nav{
+    float: right;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+.header-c .nav .nav-item{
+    position: relative;
+    float: left;
+    margin-right: 81px;
+    /* font-size:16px;
+    color: lightslategray; */
+}
+.header-c .nav .nav-item.mr0{
+    margin-right:40px;
+}
+.header-c .nav .nav-item a{
+    display: block;
+    font-size:16px;
+    color: lightslategray;
+}
+.header-c .nav .nav-item:hover a{
+    color: black;
+  
+}
+
+.header-c .nav .nav-item span{
+    position: absolute;
+    display:none;
+    bottom:26px;   
+    left:0;
+    height: 1px;
+    width: 100%;
+    background-color:#b9ab77;
+}
+.header-c .nav .nav-item:hover span{
+    display:block;
+}
+/* .header-c .nav .nav-item.active span{
+    display: block;
+}
+.header-c .nav .nav-item.active a{
+    color:black;
+} */
+.footer{
+    height: 100px;
+    background-color: #fff;
+}
+.footer-c{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.footer .left{
+    float: left;
+    padding-top:40px;
+}
+.footer-c p{
+    color:#fff;
+    font-size:12px;
+    line-height: 25px;
+
+}
+.footer-c .right{
+    float: right;
+    height: 100%;
+    line-height:100px;
+}
+.footer-c .right li{
+    float:left;
+    margin-right:70px;
+    color:#fff;
+    font-size:12px;
+    font-weight: bold;
+}
+.footer-c .right li a{
+    color:#fff;
+    font-size:12px;
+}
+.footer-c .right .join{
+    margin-right:0;
+}
+/* .footer .footer-c .right .VERONICA{
+    line-height:100px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+
+} */
+.footer .footer-c .right  li .icon{
+    display:inline-block;
+    background: url(../img/icon.png) no-repeat left;
+   
+    text-indent: 20px;
+}

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header-c{
+    width: 1200px;
+    height: 80px;
+    margin:0 auto;
+    /* background-color: aqua; */
+}
+.header-c .logo{
+    float: left;
+    height: 100%;
+    width: 307px;
+    background: url(img/logo.png) center no-repeat;
+}
+.header-c .nav{
+    float: right;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+.header-c .nav .nav-item{
+    position: relative;
+    float: left;
+    margin-right: 81px;
+    /* font-size:16px;
+    color: lightslategray; */
+}
+.header-c .nav .nav-item.mr0{
+    margin-right:40px;
+}
+.header-c .nav .nav-item a{
+    display: block;
+    font-size:16px;
+    color: lightslategray;
+}
+.header-c .nav .nav-item:hover a{
+    color: black;
+  
+}
+
+.header-c .nav .nav-item span{
+    position: absolute;
+    display:none;
+    bottom:26px;   
+    left:0;
+    height: 1px;
+    width: 100%;
+    background-color:#b9ab77;
+}
+.header-c .nav .nav-item:hover span{
+    display:block;
+}
+.header-c .nav .nav-item.active span{
+    display: block;
+}
+.header-c .nav .nav-item.active a{
+    color:black;
+}
+.banner{
+    width: 100%;
+    height: 720px;
+    background: url(img/banner1.png) no-repeat center;
+    background-size: cover;
+}
+.banner-c{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin:0 auto;
+    /* background: url(img/banner1.png) no-repeat center;
+    background-size: cover; */
+}
+.banner-c .dots{
+    position: absolute;
+    width: 100px;   
+    height: 10px;
+    left: 50%;
+    margin-left:-50px;
+    /* background-color: black; */
+    bottom:24px;
+    /* text-align: center; */
+    
+}
+.banner-c .dots .dots-item{
+    display: inline-block;
+    /* line-height: 8px; */
+    height: 8px;    
+    /* line-height: 8px; */
+    width: 8px;
+    background-color:#bebec2;
+    border-radius: 50%;
+    margin:0 28px 0 0;
+    border:5px solid transparent;
+    background-clip: content-box;
+  
+    /* margin-bottom:0; */
+}
+.banner-c .dots .dots-item:hover{
+    background-color: seashell;
+    border: 5px solid #bebec2;
+    /* bottom:0; */
+   
+}
+.banner-c .prev{
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left:-49px;
+    height: 80px;
+    width: 49px;
+    
+    background: url(img/arrowleft.png) no-repeat center;
+
+}
+.banner-c .next{
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    right:-49px;
+    height: 80px;
+    width: 49px;
+    
+    background: url(img/arrowright.png) no-repeat center;
+
+}
+
+.main {
+    width: 100%;
+    
+}
+.main-c{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.main-c .txt{
+    text-align: center;
+    margin-top:100px;
+    margin-bottom:80px;
+}
+.main-c .txt .cname{
+    
+    font-size:26px;
+    color: #444444;
+    
+}
+.main-c .txt .ename{
+    font-size: 16px;
+    color:#d2d2d2;
+}
+.main-c .list{
+    /* position: relative; */
+    text-align: center;
+    /* margin-top:80px; */
+    /* height: 72px; */
+}
+.main-c .list li{
+    display:inline-block;
+    position: relative;
+    margin-right:88px;
+    font-size: 16px;
+    color: #4d4d4d;
+    height: 72px;
+    cursor: pointer;
+}
+.main-c .list li.mr0{
+    margin-right: 0;
+}
+.main-c .list li span{
+    display: none;
+    position: absolute;
+    width:100%;
+    bottom:40px;
+    left: 50%;
+ 
+   
+    height: 4px;
+    width: 4px;
+    background-color: #b9ab77;
+    border-radius: 50%;
+}
+.main-c .list li:hover span{
+    display: block;
+}
+.main-c .list li:hover:hover{
+    color:#b9ab77;
+}
+.main-c .list li.active span{
+    display: block;
+}
+.main-c .list li.active{
+    color:#b9ab77;
+}
+.main-c .imgpart {
+    height: 360px;
+    /* width: 270px; */
+}
+.main-c .imgpart .img{
+    float: left;
+    margin-right:40px;
+    height: 360px;
+    width: 270px;
+    background:url(img/img1.png);
+}
+.main-c .imgpart1{
+    height: 180px;
+}
+.main-c .imgpart1 .img1{
+    float: left;
+    margin-right:40px;
+    width: 270px;
+    height: 180px;
+    background: url(img/img2.png);
+
+}
+.main-c .imgpart1 .img1.mr0{
+    margin-right: 0;
+}
+.main-c .imgpart .img.mr0{
+    margin-right: 0;
+}
+.main-c .more{
+    margin-top:60px;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+
+}
+.main-c .more a{
+    display: inline-block;
+    width: 149px;
+    height: 45px;
+    line-height: 45px;
+    border:1px solid #f5f5f5;
+    font-size:12px;
+    color:#2d2d2d;
+    text-align: center; 
+}
+.main .part3{
+    position: relative;
+}
+.main .part3 .txt{
+    text-align: center;
+    margin-top:100px;
+    margin-bottom:80px;
+}
+.main .part3 .txt .cname{
+    
+    font-size:26px;
+    color: #444444;
+    
+}
+.main .part3 .txt .ename{
+    font-size: 16px;
+    color:#d2d2d2;
+}
+.main .part3 .banner2{
+    width: 100%;
+    height: 354px;
+    background: url(img/banner2.png) no-repeat center;
+    background-size: cover;
+}
+.main .part3 .detail{
+    position: absolute;
+    width: 1200px;
+    height: 334px;
+    background-color: #ffffff;
+    right:50%;
+    margin-right:-600px;
+    top:280px;
+}
+.main .part3 .detail li{
+    float:left;
+    height: 334px;
+    width: 300px;
+}
+.main .part3 .detail .detail-pic{
+    background:url(img/detail1.png) center no-repeat;
+}
+.part3 .more{
+    margin-top:395px;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+
+}
+.part3 .more a{
+    display: inline-block;
+    width: 149px;
+    height: 45px;
+    line-height: 45px;
+    border:1px solid #f5f5f5;
+    font-size:12px;
+    color:#2d2d2d;
+    text-align: center; 
+}
+.part3 .detail .all {
+    margin-left:43px;
+    margin-top:43px;
+}
+.part3 .detail .all .date{
+    float:left;
+    font-size: 30px;
+    color:#8b8b8b;
+    overflow: hidden;
+
+}
+.part3 .detail .all .year{
+    float: left;
+    width: 83px;
+    line-height: 30px;
+    font-size: 14px;
+    color:#8b8b8b;
+    text-align: center;
+    margin-top:10px;
+
+}
+.part3 .detail .all .title{
+    float: left;
+    margin-top:45px;
+    font-size:16px;
+    color:black;
+    font-weight: bold;
+    width: 100%;
+    
+}
+.part3 .detail .all .brief{
+    float:left;
+    font-size:13px;
+    color:#8b8b8b;
+    line-height: 23px;
+    margin-top:20px;
+}
+.part3 .detail .all .next{
+    float: left;
+    margin-top:55px;
+    font-size:13px;
+    /* color:#bebebe; */
+}
+.part3 .detail .all .next a{
+    color:#bebebe
+}
+.part4{
+    position: relative;
+    /* float: left; */
+    background: url(img/part4.png) no-repeat center;
+    background-size: cover;
+    height: 664px;
+    width: 100%;
+    margin-top:60px;
+    overflow: hidden;
+}
+.part5{
+    float: left;
+    width: 389px;   
+    height: 663px;
+    background: url(img/part5.png)no-repeat left;
+}
+.part6{
+    float: right;
+    width: 217px;
+    height: 663px;
+    background: url(img/part6.png) no-repeat right;
+}
+.part4  .designer{
+    position: absolute;
+    width: 1200px; 
+    height: 664px;
+    left:50%;
+    margin-left:-600px;
+    top:0;
+    /* background-color: #fff; */
+    z-index: 99999;
+}
+
+.part4 .designer .txt{
+    text-align: center;
+    margin-top:100px;
+    margin-bottom:80px;
+}
+.part4 .designer .txt .cname{
+    
+    font-size:26px;
+    color: #d2d2d2;
+    
+}
+.part4 .designer .txt .ename{
+    font-size: 16px;
+    color:#d2d2d2;
+}
+.part4  .designer .designer-list{
+    width: 100%;
+    height: 453px;
+    /* background-color: #fff; */
+}
+.part4  .designer .designer-list .designer-item{
+    float: left;
+    height: 100%;
+    width: 277px;
+    /* margin-right:80px; */
+    /* background-color:red; */
+}
+.part4  .designer .designer-list .designer-item.ml0{
+    margin-left: 60px;
+    margin-right: 130px;
+}
+
+.part4  .designer .designer-list .designer-item.mr0{
+    margin-right:0px;
+    margin-left:133px;
+   
+}
+ .designer-item .photo{
+    width: 100%;
+    height: 205px;
+    background: url(img/jason.png) no-repeat top center;
+ }
+ .designer-item h3{
+    text-align: center;
+    height: 18px;
+    line-height:18px;
+    width: 100%;
+    font-size:24px;
+    color:#f7f5f5;
+ }
+ .designer-item .title{
+    font-size: 12px;
+    color:#b9b9b9;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:20px;
+ }
+ .designer-item .intro{
+    font-size: 12px;
+    color:#b9b9b9;
+    text-align: center;
+ }
+ .designer-item .more{
+    /* margin-top:395px; */
+    margin-top:50px;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+
+}
+.designer-item .more a{
+    display: inline-block;
+    width: 149px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom:1px solid #b9b9b9;
+    font-size:12px;
+    color:#b9b9b9;
+    text-align: center; 
+}
+
+.footer{
+    height: 100px;
+    background-color: #fff;
+}
+.footer-c{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.footer .left{
+    float: left;
+    padding-top:40px;
+}
+.footer-c p{
+    color:#323232;
+    font-size:12px;
+    line-height: 25px;
+
+}
+.footer-c .right{
+    float: right;
+    height: 100%;
+    line-height:100px;
+}
+.footer-c .right li{
+    float:left;
+    margin-right:70px;
+    color:#323232;
+    font-size:12px;
+    font-weight: bold;
+}
+.footer-c .right li a{
+    color:#323232;
+    font-size:12px;
+}
+.footer-c .right .join{
+    margin-right:0;
+}
+/* .footer .footer-c .right .VERONICA{
+    line-height:100px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+
+} */
+.footer .footer-c .right  li .icon{
+    display:inline-block;
+    background: url(img/icon.png) no-repeat left;
+   
+    text-indent: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-c">
+            <div class="logo"></div>
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a href="#">首页</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/wedding.html">婚纱礼服</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/jew.html">珠宝首饰</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/latest.html">最新活动</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item mr0">
+                    <a href="pages/about.html">关于我们</a>
+                    <span class="line"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-c">
+            <ul class="dots">
+                <li class="dots-item"></li>
+                <li class="dots-item"></li>
+            </ul>
+            <div class="prev"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+    <div class="main">
+        <!-- <div class="banner2"></div> -->
+        <div class="main-c">
+            <!-- <div class="banner2"></div> -->
+            <div class="main-item">
+                <div class="txt">
+                        <p class="cname">婚纱礼服</p>
+                        <p class="ename">Wedding Dress</p>
+                    </div>
+                    <ul class="list">
+                        <li class="list-item active">
+                            新品/NEW
+                            <span class="point"></span>
+                        </li>
+                        <li class="list-item">
+                            2018春夏
+                            <span class="point"></span>
+                        </li>
+                        <li class="list-item">
+                            2018秋冬
+                            <span class="point"></span>
+                        </li>
+                        <li class="list-item mr0" >
+                            专属定制
+                            <span class="point"></span>
+                        </li>
+                    </ul>
+                    <ul class="imgpart">
+                        <li class="img-item">
+                            <div class="img"></div>
+                        </li>
+                        <li class="img-item">
+                            <div class="img"></div>
+                        </li>
+                        <li class="img-item">
+                            <div class="img"></div>
+                        </li>
+                        <li class="img-item">
+                            <div class="img mr0"></div>
+                        </li>
+                        
+                    </ul>
+                    <div class="more">
+                        <a href="#" >MORE</a>
+                    </div>
+            </div>
+           
+                <div class="main-item">
+                <div class="txt">
+                        <p class="cname">珠宝首饰</p>
+                        <p class="ename">Jewelry Show</p>
+                    </div>
+                    
+                    <ul class="imgpart1">
+                        <li class="img-item">
+                            <div class="img1"></div>
+                        </li>
+                        <li class="img-item">
+                            <div class="img1"></div>
+                        </li>
+                        <li class="img-item">
+                            <div class="img1"></div>
+                        </li>
+                        <li class="img-item">
+                            <div class="img1 mr0"></div>
+                        </li>
+                        
+                    </ul>
+                    <div class="more">
+                        <a href="#" >MORE</a>
+                    </div>
+            </div>
+        </div>
+        <div class="part3">
+                <div class="txt">
+                        <p class="cname">最新活动</p>
+                        <p class="ename">Latest Activities</p>
+                </div>
+                <div class="banner2">
+
+                </div>
+            <ul class="detail">
+                <li class="detail-item">
+                    <div class="all">
+                        <div class="date">6-18</div>
+                        <div class="year">2017</div>
+                        <div class="title">新品发布会</div>
+                        <div class="brief">
+                            伴随着T台两侧色彩趋势报告的发布，VERONICA2017婚纱新品发布会正...
+                        </div>
+                        <div class="next">
+                            <a href="#">more></a>
+                        </div>
+                    </div>
+                   
+
+                </li>
+                <li class="detail-pic"></li>
+                <li class="detail-item">
+                    <div class="all">
+                        <div class="date">6-18</div>
+                        <div class="year">2017</div>
+                        <div class="title">新品发布会</div>
+                        <div class="brief">
+                            伴随着T台两侧色彩趋势报告的发布，VERONICA2017婚纱新品发布会正...
+                        </div>
+                        <div class="next">
+                            <a href="#">more></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="detail-item">
+                        <div class="all">
+                            <div class="date">6-18</div>
+                            <div class="year">2017</div>
+                            <div class="title">新品发布会</div>
+                            <div class="brief">
+                                伴随着T台两侧色彩趋势报告的发布，VERONICA2017婚纱新品发布会正...
+                            </div>
+                            <div class="next">
+                                <a href="#">more></a>
+                            </div>
+                        </div>
+                </li>
+              
+            </ul>
+            <div class="more">
+                    <a href="#" >MORE</a>
+            </div>
+            
+            
+        </div>
+       
+    </div>
+    <div class="part4">
+            <div class="part5"></div>
+            <div class="designer">
+                <div class="txt">
+                    <p class="cname">设计师</p>
+                    <p class="ename">Designers</p>
+                </div>
+                <ul class="designer-list">
+                    <li class="designer-item ml0">
+                        <div class="photo">
+
+                        </div>
+                    <h3> Jason.W</h3>
+                    <p class="title">首席设计师</p>
+                    <p class="intro">法国时装设计师，VERONICA品牌创始人之一，设计
+                            总监，2016福布斯最具影响力的设计师...</p>
+                    <div class="more">
+                        <a href="pages/designers.html" >MORE</a>
+                    </div>
+                    </li>
+                    <li class="designer-item mm0">
+                        <div class="photo">
+
+                            </div>
+                        <h3> Jason.W</h3>
+                        <p class="title">首席设计师</p>
+                        <p class="intro">法国时装设计师，VERONICA品牌创始人之一，设计
+                                总监，2016福布斯最具影响力的设计师...</p>
+                        <div class="more">
+                            <a href="pages/designers.html" >MORE</a>
+                        </div>
+                    </li>
+                    <li class="designer-item mr0">
+                        <div class="photo">
+
+                            </div>
+                        <h3> Jason.W</h3>
+                        <p class="title">首席设计师</p>
+                        <p class="intro">法国时装设计师，VERONICA品牌创始人之一，设计
+                                总监，2016福布斯最具影响力的设计师...</p>
+                        <div class="more">
+                            <a href="pages/designers.html" >MORE</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="part6"></div>
+    </div>
+    <div class="footer">    
+        <div class="footer-c">
+            <div class="left">
+                <p>网站备案号：豫ICP备110121210号</p>
+                <p>增值电信业务经营许可证号：豫B2-20100033</p>
+            </div>
+            <ul class="right">
+                <li class="VERONICA">
+                    <div class="icon">
+                        2018 VERONICA
+                    </div>
+                </li>
+                <li>
+                    <a href="#">联系我们</a>
+                </li>
+                <li class="join">
+                    <a href="#">加入我们</a>
+                </li>
+            </ul>
+        </div>
+</div>
+</body>
+</html>

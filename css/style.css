@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header-c{
+    width: 1200px;
+    height: 80px;
+    margin:0 auto;
+    /* background-color: aqua; */
+}
+.header-c .logo{
+    float: left;
+    height: 100%;
+    width: 307px;
+    background: url(img/logo.png) center no-repeat;
+}
+.header-c .nav{
+    float: right;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+.header-c .nav .nav-item{
+    position: relative;
+    float: left;
+    margin-right: 81px;
+    /* font-size:16px;
+    color: lightslategray; */
+}
+.header-c .nav .nav-item.mr0{
+    margin-right:40px;
+}
+.header-c .nav .nav-item a{
+    display: block;
+    font-size:16px;
+    color: lightslategray;
+}
+.header-c .nav .nav-item:hover a{
+    color: black;
+  
+}
+
+.header-c .nav .nav-item span{
+    position: absolute;
+    display:none;
+    bottom:26px;   
+    left:0;
+    height: 1px;
+    width: 100%;
+    background-color:#b9ab77;
+}
+.header-c .nav .nav-item:hover span{
+    display:block;
+}
+.header-c .nav .nav-item.active span{
+    display: block;
+}
+.header-c .nav .nav-item.active a{
+    color:black;
+}
+.banner{
+    width: 100%;
+    height: 720px;
+    background: url(img/banner1.png) no-repeat center;
+    background-size: cover;
+}
+.banner-c{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin:0 auto;
+    /* background: url(img/banner1.png) no-repeat center;
+    background-size: cover; */
+}
+.banner-c .dots{
+    position: absolute;
+    width: 100px;   
+    height: 20px;
+    left: 50%;
+    margin-left:-50px;
+    /* background-color: black; */
+    bottom:24px;
+    text-align: center;
+    
+}
+.banner-c .dots .dots-item{
+    display: inline-block;
+    /* line-height: 8px; */
+    height: 8px;    
+    width: 8px;
+    background-color:#bebec2;
+    border-radius: 50%;
+    margin-right:28px;
+    text-align: center;
+}
+.banner-c .dots .dots-item:hover{
+    background-color: seashell;
+     border: 5px solid #bebec2;
+}
